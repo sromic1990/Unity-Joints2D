@@ -239,6 +239,8 @@ GameObject:
   - component: {fileID: 334890311}
   - component: {fileID: 334890310}
   - component: {fileID: 334890313}
+  - component: {fileID: 334890309}
+  - component: {fileID: 334890314}
   m_Layer: 0
   m_Name: Hexagon_Sljoint
   m_TagString: Untagged
@@ -246,6 +248,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!234 &334890309
+SliderJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 334890308}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 4.3, y: -4.7}
+  m_AutoConfigureAngle: 0
+  m_Angle: 0
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_TranslationLimits:
+    m_LowerTranslation: 0
+    m_UpperTranslation: 0
 --- !u!50 &334890310
 Rigidbody2D:
   serializedVersion: 4
@@ -340,6 +367,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.28
+--- !u!114 &334890314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 334890308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad95b976db18ca4387b72500cb4e00e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameObject1: {fileID: 334890308}
+  GameObject2: {fileID: 1847747332}
 --- !u!1 &369212392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,9 +1645,9 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -3.5, y: -3.2}
-  m_UseMotor: 1
+  m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 5000
+    m_MotorSpeed: 100
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
