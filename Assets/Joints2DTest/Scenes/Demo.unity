@@ -1582,6 +1582,7 @@ GameObject:
   - component: {fileID: 1879992580}
   - component: {fileID: 1879992582}
   - component: {fileID: 1879992579}
+  - component: {fileID: 1879992578}
   m_Layer: 0
   m_Name: Square_Hjoint
   m_TagString: Untagged
@@ -1589,6 +1590,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!233 &1879992578
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1879992577}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -3.5, y: -3.2}
+  m_UseMotor: 1
+  m_Motor:
+    m_MotorSpeed: 5000
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: -245
+    m_UpperAngle: 0.5
 --- !u!50 &1879992579
 Rigidbody2D:
   serializedVersion: 4
