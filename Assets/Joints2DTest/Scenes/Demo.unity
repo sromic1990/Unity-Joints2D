@@ -724,7 +724,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1294295697}
   - component: {fileID: 1294295696}
-  - component: {fileID: 1294295695}
   - component: {fileID: 1294295694}
   - component: {fileID: 1294295693}
   - component: {fileID: 1294295698}
@@ -743,13 +742,6 @@ AudioListener:
   m_GameObject: {fileID: 1294295692}
   m_Enabled: 1
 --- !u!124 &1294295694
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1294295692}
-  m_Enabled: 1
---- !u!92 &1294295695
 Behaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -790,7 +782,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1

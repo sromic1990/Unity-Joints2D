@@ -1,31 +1,39 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.Serialization;
 
-public class Line : MonoBehaviour {
+namespace Joints2DTest.Scripts
+{
+	public class Line : MonoBehaviour {
 
-    public GameObject gameObject1;          // Reference to the first GameObject
-    public GameObject gameObject2;          // Reference to the second GameObject
+		public GameObject GameObject1;          // Reference to the first GameObject
+		public GameObject GameObject2;          // Reference to the second GameObject
 
-    private LineRenderer line;  						 // Line Renderer
+		private LineRenderer _line;  						 // Line Renderer
 
-	// Use this for initialization
-	void Start () {
-        // Add a Line Renderer to the GameObject
-        line = this.gameObject.AddComponent<LineRenderer>();
-        // Set the width of the Line Renderer
-        line.SetWidth(0.05F, 0.05F);
-        // Set the number of vertex fo the Line Renderer
-        line.SetVertexCount(2);
-	}
+		// Use this for initialization
+		private void Start () 
+		{
+			// Add a Line Renderer to the GameObject
+			_line = this.gameObject.AddComponent<LineRenderer>();
+			// Set the width of the Line Renderer
+//			_line.SetWidth(0.05F, 0.05F);
+			_line.startWidth = 0.05f;
+			_line.endWidth = 0.05f;
+			// Set the number of vertex fo the Line Renderer
+//			_line.SetVertexCount(2);
+			_line.positionCount = 2;
+		}
 	
-	// Update is called once per frame
-	void Update () {
-        // Check if the GameObjects are not null
-        if (gameObject1 != null && gameObject2 != null)
-        {
-            // Update position of the two vertex of the Line Renderer
-            line.SetPosition(0, gameObject1.transform.position);
-            line.SetPosition(1, gameObject2.transform.position);
-        }
+		// Update is called once per frame
+		public void Update () 
+		{
+			// Check if the GameObjects are not null
+			if (GameObject1 != null && GameObject2 != null)
+			{
+				// Update position of the two vertex of the Line Renderer
+				_line.SetPosition(0, GameObject1.transform.position);
+				_line.SetPosition(1, GameObject2.transform.position);
+			}
+		}
 	}
 }
